@@ -1,0 +1,11 @@
+{
+	"$id": "schema:blog:post",
+	"type": "object",
+	"required": ["title", "content", "category", "tags"],
+	"properties": {
+		"title": { "type": "string", "maxLength": 40, "minLength": 3 },
+		"content": { "type": "string", "maxLength": 1000, "minLength": 10 },
+		"category": { "type": "string" },
+		"tags": { "type": "string", "maxLength": 255 }
+	}
+}
