@@ -1,0 +1,19 @@
+{
+	"$id": "schema:blog:get",
+	"type": "object",
+	"params": {
+		"type": "object",
+		"properties": {
+			"id": { "type": "string", "maxLength": 36 }
+		}
+	},
+	"query": {
+		"type": "object",
+		"properties": {
+			"id": { "type": "string", "maxLength": 36 },
+			"title": { "type": "string" },
+			"content": { "type": "string" },
+			"tags": { "type": "string" }
+		}
+	}
+}
