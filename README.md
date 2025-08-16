@@ -2,6 +2,7 @@
 
 > A Blog rest api built with Fastify, this project is written in JavaScript
 > for post blogging.
+> this is an exercise from [Roadmap.sh] https://roadmap.sh/projects/blogging-platform-api
 
 ## How to run
 
@@ -9,7 +10,7 @@
 - Open the project in the terminal.
 - `npm install` to install the project dependencies.
 - `npm start` to start the project.
-- `npm start:dev` to start the project in develpment mode.
+- `npm start:dev` to start the project in development mode.
 
 ### Dependencies
 
@@ -17,7 +18,7 @@
 - [fastify] <https://github.com/fastify>
   > for plugin encapsulation.
 - [fastify-plugin] <https://github.com/davidedantonio/fastify-axios>
-- > for database store with mysql
+- > for database store with MySQL
 - [@fastify/mysql] <https://github.com/davidedantonio/fastify-axios>
 
 ### EndPoints
