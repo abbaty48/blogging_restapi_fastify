@@ -1,0 +1,11 @@
+{
+	"$id": "schema:blog:delete",
+	"type": "object",
+	"params": {
+		"type": "object",
+		"required": ["id"],
+		"properties": {
+			"id": { "type": "string", "maxLength": 36 }
+		}
+	}
+}

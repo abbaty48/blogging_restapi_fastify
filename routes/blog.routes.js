@@ -103,5 +103,26 @@ export default fastifyPlugin(async (app) => {
 				};
 			},
 		)
-		.delete("/post/:id", async (request, reply) => {});
+		.delete(
+			"/posts/:id",
+			{ schema: { $ref: "schema:blog:delete" } },
+			async (request, _reply) => {
+				const { id } = request.params;
+				const { getConnection, query } = app.mysql;
+				const connection = await getConnection();
+				let [rows] = await query(`SELECT * FROM posts WHERE id = ?`, [id]);
+
+				if (rows.length) {
+					const [result] = await query("DELETE FROM posts WHERE id = ?", [id]);
+
+					await connection.release();
+					return !!result.affectedRows;
+				}
+
+				return {
+					message:
+						"Opps, a post with that id does not exist, please check and try again.",
+				};
+			},
+		);
 });
